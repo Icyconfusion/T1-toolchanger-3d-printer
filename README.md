@@ -1,5 +1,9 @@
 # T1-toolchanger-3d-printer
 A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing.
+<img width="810" height="752" alt="image" src="https://github.com/user-attachments/assets/e5c136a9-70ca-4d87-8322-f1a00a7d1534" />
+
+I made this project as I had been looking to make a 3d printer. I wanted to be able to print in different colours, without the added cost of AMS systems. It was also a good opportunity to learn about using programs like fusion and Kicad, which I have limited experience with, as well as learning about electronic components. I created this project without a guide, using my own ideas to combat problems, with some inspiration from existing products e.g using linear rods.
+
 
 The printer uses a swappable hotend mechanism to dock tools, removing the need to purge filament as in other multi-material systems. The idle toolheads sit on an aluminium extrusion. The X carriage, supported by linear rods, moves in and attaches to the toolhead, using kinematic couplings for repeatability. A magnetic pogo connector transfers power for the heter and thermistor.
 <img width="890" height="646" alt="image" src="https://github.com/user-attachments/assets/f353a81a-1eab-4a17-8c4e-561f42465f79" />
@@ -80,15 +84,17 @@ The LCD is the main user interface of the printer. I am using the BIGTREETECH TF
 
 CAD
 
-The printer requires multiple 3d printed parts for the assembly. This is a list of required 3d printed parts:
-1x Y carriage Idler
-1x Y carriage stepper motor
-1x X carriage
-1x Extruder coupling
-1x toolhead (per tool)
-1x Extruder mechanism
-4x z axis bearing clamp
-2x Z stepper bracket
+| Quanity      | Name                     |  Picture    |
+| -------------| -------------------------|-----------  |
+|1             | Y carriage Idler         |<img width="606" height="466" alt="image" src="https://github.com/user-attachments/assets/ffd1db70-879c-4ebd-bb6e-953022c5ced1" />
+| 1            | Y carriage stepper motor |     |
+| 1            | X carriage               |<img width="816" height="535" alt="image" src="https://github.com/user-attachments/assets/fa71c8db-2c14-4270-a649-faf2eaf7d6ea" />
+| 1            | Extruder coupling        | <img width="910" height="492" alt="image" src="https://github.com/user-attachments/assets/21613620-40f1-4a05-82c4-1d6b71b7058b" />
+| 1 (per tool) | Toolhead                 |<img width="927" height="597" alt="image" src="https://github.com/user-attachments/assets/19b2ccc4-2ab2-40dc-970a-1fd5396f2856" />
+| 1            | Extruder mechanism       |<img width="607" height="399" alt="image" src="https://github.com/user-attachments/assets/b570c79d-a953-4c9f-bea3-65194da70070" />
+| 4            | Z axis bearing clamp     |<img width="815" height="679" alt="image" src="https://github.com/user-attachments/assets/293ec12e-89ed-4642-9345-cbd87039b55d" />
+| 2            | Z stepper bracket        |<img width="882" height="596" alt="image" src="https://github.com/user-attachments/assets/4177f87a-acc6-4713-a8a9-84b64c39d4c3" />
+| 4            | Z rod holder             |<img width="763" height="627" alt="image" src="https://github.com/user-attachments/assets/a2213d38-e17e-4504-9cd1-95e1a024b09e" />
 
 
 
