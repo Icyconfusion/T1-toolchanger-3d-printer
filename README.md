@@ -52,9 +52,24 @@ WIP
 
 Electronics
 
-The printer uses a PCB motherboard to mount components including the MCU, stepper drivers, LCD headers, and heater terminals. I decided on a 24v power supply as it was compatible with my heater. To give power to the PCB, I used a meanwell 24v 360W power supply. <img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/e40018ba-65bb-4718-b196-dc43032a6b18" />
+The printer uses a PCB motherboard to mount components including the MCU (Mega 2560), stepper drivers, LCD headers, and heater terminals. I decided on a 24v power supply as it was compatible with my heater. To give power to the PCB, I used a meanwell 24v 360W power supply.
+<img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/e40018ba-65bb-4718-b196-dc43032a6b18" />
 
-This connects through wires to screw terminals on the board, which then distribute power across the PCB. Because of the power requirements, I decided to use a 4 layer PCB as I couldn't route signal traces through the power and GND traces. The top and bottom layers of the PCB are the power layers. Power runs from the PSU input to the heater screw terminal, and throughout the board. It is converted to 5v through a buck converter. <img width="655" height="384" alt="image" src="https://github.com/user-attachments/assets/484874a6-35cf-4dcd-a01a-cc379433830f" />
+This connects through wires to screw terminals on the board, which then distribute power across the PCB. Because of the power requirements, I decided to use a 4 layer PCB as I couldn't route signal traces through the power and GND traces. The top and bottom layers of the PCB are the power layers. Power runs from the PSU input to the heater screw terminal, and throughout the board. It is converted to 5v through a buck converter. The Hotend heater is powered through a screw terminal, and controlled by the mosfet next to its terminal. The hotend fan is controlled by a header, it is in an always on state.
+<img width="655" height="384" alt="image" src="https://github.com/user-attachments/assets/484874a6-35cf-4dcd-a01a-cc379433830f" />
+
+The signal traces from the drivers, limit switches, thermistor and LCD are on the second and third layers.
+<img width="645" height="394" alt="image" src="https://github.com/user-attachments/assets/c286e127-8904-41be-883f-37167d5bf014" />
+
+The MCU is a mega 2560. I chose this because of its large availability of pins, enabling future upgrades and fitting all components. The stepper drivers are A4988s, which have microstepping up to 1/16. All microstep pins are connected to 5v, making the configuration 1/16. The limit switches, thermistor and lcd connect to headers.
+
+The power for the stepper drivers is 24v. To reduce the effect of spikes, a small 100nf capacitor is used between the 24v and gnd supply of each driver. For larger spikes, a 100 uF capacitor is also placed between 24v and gnd of each driver.
+<img width="277" height="402" alt="image" src="https://github.com/user-attachments/assets/eb339b2d-3b99-4bf2-b4e5-5e703c932cf7" />
+
+The LCD is the main user interface of the printer.
+
+
+
 
 
 
