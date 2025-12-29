@@ -47,7 +47,15 @@ The assembled X and Y axis is below:
 The Z axis involves the motion of the bed up and down. Originally, I had planned to move the hotend throughout all 3 axis, and the bed was fixed. I encountered many issues with reliably and consistently achieving motion of the hotend without the risk of flexing, so I pivoted to a bed Z axis. A leadscrew and two 8mm linear rods are used on each side, connected to an aluminium profile by a nut block and 3d printed clamps.
 <img width="569" height="408" alt="image" src="https://github.com/user-attachments/assets/d25802ae-9f6f-48ec-a895-641b2fc667ca" />
 
-WIP
+The bed frame is a square made of aluminium extrusions, held together by 90 degree corner connectors. The 6mm aluminium print bed sits on top of that, threaded into T nuts in the profiles.
+<img width="617" height="630" alt="image" src="https://github.com/user-attachments/assets/75dc115a-3a3c-4c20-b868-0830292d1216" />
+<img width="1004" height="270" alt="image" src="https://github.com/user-attachments/assets/4782ae3d-23fc-4430-9a25-69dddad5791c" />
+<img width="657" height="303" alt="image" src="https://github.com/user-attachments/assets/5f6981f7-08a3-4a04-ab67-2ce45387adbb" />
+<img width="880" height="356" alt="image" src="https://github.com/user-attachments/assets/f8bb2860-a8e1-437e-bc85-dd8f3af04aad" />
+
+
+
+
 
 
 Electronics
@@ -66,7 +74,25 @@ The MCU is a mega 2560. I chose this because of its large availability of pins, 
 The power for the stepper drivers is 24v. To reduce the effect of spikes, a small 100nf capacitor is used between the 24v and gnd supply of each driver. For larger spikes, a 100 uF capacitor is also placed between 24v and gnd of each driver.
 <img width="277" height="402" alt="image" src="https://github.com/user-attachments/assets/eb339b2d-3b99-4bf2-b4e5-5e703c932cf7" />
 
-The LCD is the main user interface of the printer.
+The LCD is the main user interface of the printer. I am using the BIGTREETECH TFT70 V3.0 Touch Screen from BigTreeTech which has wifi capability. I chose this LCD as it only uses 2 pins on the MCU (TX and RX), has an SD card, and is touchscreen. It is possible to mount the LCD separately to the motherboard, and run a cable between the two, enabling you to set it up however you like. LCD Header:
+<img width="481" height="178" alt="image" src="https://github.com/user-attachments/assets/00c3d65e-e621-4007-9945-d0f34a974b62" />
+
+
+CAD
+
+The printer requires multiple 3d printed parts for the assembly. This is a list of required 3d printed parts:
+1x Y carriage Idler
+1x Y carriage stepper motor
+1x X carriage
+1x Extruder coupling
+1x toolhead (per tool)
+1x Extruder mechanism
+4x z axis bearing clamp
+2x Z stepper bracket
+
+
+
+
 
 
 
