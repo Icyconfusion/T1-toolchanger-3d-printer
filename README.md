@@ -11,7 +11,7 @@ The printer uses a swappable hotend mechanism to dock tools, removing the need t
 Toolhead:
 <img width="543" height="517" alt="image" src="https://github.com/user-attachments/assets/016b33a6-f840-4cb9-86a1-df751536feec" />
 
-Assembly
+# **Assembly**
 
 The printer assembly is made by aluminium extrusions forming a cube, with corner connectors for mounting.
 <img width="563" height="509" alt="image" src="https://github.com/user-attachments/assets/e9258c2b-e4d6-4b22-9a8f-e9b41eb924f0" />
@@ -62,7 +62,7 @@ The bed frame is a square made of aluminium extrusions, held together by 90 degr
 
 
 
-Electronics
+# **Electronics**
 
 The printer uses a PCB motherboard to mount components including the MCU (Mega 2560), stepper drivers, LCD headers, and heater terminals. I decided on a 24v power supply as it was compatible with my heater. To give power to the PCB, I used a meanwell 24v 360W power supply.
 <img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/e40018ba-65bb-4718-b196-dc43032a6b18" />
@@ -81,8 +81,11 @@ The power for the stepper drivers is 24v. To reduce the effect of spikes, a smal
 The LCD is the main user interface of the printer. I am using the BIGTREETECH TFT70 V3.0 Touch Screen from BigTreeTech which has wifi capability. I chose this LCD as it only uses 2 pins on the MCU (TX and RX), has an SD card, and is touchscreen. It is possible to mount the LCD separately to the motherboard, and run a cable between the two, enabling you to set it up however you like. LCD Header:
 <img width="481" height="178" alt="image" src="https://github.com/user-attachments/assets/00c3d65e-e621-4007-9945-d0f34a974b62" />
 
+### Schematic
+<img width="1403" height="635" alt="image" src="https://github.com/user-attachments/assets/a9da121c-049d-4db2-9c93-1d8431419d5b" />
 
-CAD
+# **BOM**
+### CAD
 
 | Quanity      | Name                     |  Picture    |
 | -------------| -------------------------|-----------  |
@@ -96,7 +99,54 @@ CAD
 | 2            | Z stepper bracket        |<img width="882" height="596" alt="image" src="https://github.com/user-attachments/assets/4177f87a-acc6-4713-a8a9-84b64c39d4c3" />
 | 4            | Z rod holder             |<img width="763" height="627" alt="image" src="https://github.com/user-attachments/assets/a2213d38-e17e-4504-9cd1-95e1a024b09e" />
 
+### PCB
+4 layer PCB that is 230x135mm:
+<img width="1053" height="632" alt="image" src="https://github.com/user-attachments/assets/2bf4712b-93e3-4951-a62d-261e292cb73d" />
 
+### Parts
+
+1x BTT TFT70 V3.0 LCD
+1x Arduino Mega 2560
+6x Limit switch
+10x 8mm smooth rods, 500mm length
+1x 6mm smooth rod, 500mm length
+6x 8mm steel balls
+16x 2020 Aluminium profile 500mm length
+2x 500mm T8 8mm lead leadscrew 
+4x Anti-backlash leadscrew nut
+2x Hotend (CR6-SE)
+6x SCS8UU bearing block
+1x 4010 Fan
+28x SK8 clamp
+1x GT2 Timing Belt
+1x GT2 Kit
+4x Aluminium Profile 90 degree connector
+8x Aluminium profile corner connector
+1x PSU (Meanwell 24v 360W
+2x Screw terminals
+1x N-channel Mosfet
+1x 2x18 Pin header
+16x Female pin headers
+42x Male pin headers
+5x A4988 Stepper drivers
+1x 20 AWG Wire
+1x 12 AWG Wire
+3x Pogo connectors
+1x 3d print bed
+4x LM8UU bearing
+2x Angular bearing
+1x DC-DC step down Buck Converter
+110x T Nuts
+8x L Bracket
+5x 100 nF Capacitor
+5x 100 µF capacitor
+1x Spring
+6x Leadscrew fixing block
+40x M5 screws and nuts
+40x M4 screws and nuts
+30x M3 Screws and nuts
+10x M2 screws and nuts
+2x Shaft coupler
 
 
 
