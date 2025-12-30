@@ -1,5 +1,5 @@
 # T1-toolchanger-3d-printer
-A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing.
+A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing that uses marlin as the firmware.
 <img width="810" height="752" alt="image" src="https://github.com/user-attachments/assets/e5c136a9-70ca-4d87-8322-f1a00a7d1534" />
 
 I made this project as I had been looking to make a 3d printer. I wanted to be able to print in different colours, without the added cost of AMS systems. It was also a good opportunity to learn about using programs like fusion and Kicad, which I have limited experience with, as well as learning about electronic components. I created this project without a guide, using my own ideas to combat problems, with some inspiration from existing products e.g using linear rods.
