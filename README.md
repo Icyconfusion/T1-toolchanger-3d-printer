@@ -4,6 +4,8 @@ A toolchanger 3d printer with large format build size and multiple tools for qui
 
 I made this project as I had been looking to make a 3d printer. I wanted to be able to print in different colours, without the added cost of AMS systems. It was also a good opportunity to learn about using programs like fusion and Kicad, which I have limited experience with, as well as learning about electronic components. I created this project without a guide, using my own ideas to combat problems, with some inspiration from existing products e.g using linear rods.
 
+Note: The assembly is too large for Fusion to export as step, so instead I have the fusion file and an STL file of the assembly.
+
 
 The printer uses a swappable hotend mechanism to dock tools, removing the need to purge filament as in other multi-material systems. The idle toolheads sit on an aluminium extrusion. The X carriage, supported by linear rods, moves in and attaches to the toolhead, using kinematic couplings for repeatability. A magnetic pogo connector transfers power for the heter and thermistor.
 <img width="890" height="646" alt="image" src="https://github.com/user-attachments/assets/f353a81a-1eab-4a17-8c4e-561f42465f79" />
