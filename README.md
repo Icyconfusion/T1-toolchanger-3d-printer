@@ -7,7 +7,7 @@ I made this project as I had been looking to make a 3d printer. I wanted to be a
 Note: The assembly is too large for Fusion to export as step, so instead I have the fusion file and an STL file of the assembly.
 
 
-The printer uses a swappable hotend mechanism to dock tools, removing the need to purge filament as in other multi-material systems. The idle toolheads sit on an aluminium extrusion. The X carriage, supported by linear rods, moves in and attaches to the toolhead, using kinematic couplings for repeatability. A magnetic pogo connector transfers power for the heter and thermistor.
+The printer uses a swappable hotend mechanism to dock tools, removing the need to purge filament as in other multi-material systems. The idle toolheads sit on an aluminium extrusion. The X carriage, supported by a V slot extrusion, moves in and attaches to the toolhead, using kinematic couplings for repeatability. A magnetic pogo connector transfers power for the heter and thermistor.
 <img width="890" height="646" alt="image" src="https://github.com/user-attachments/assets/f353a81a-1eab-4a17-8c4e-561f42465f79" />
 
 Toolhead:
@@ -16,18 +16,17 @@ Toolhead:
 # **Assembly**
 
 The printer assembly is made by aluminium extrusions forming a cube, with corner connectors for mounting.
-<img width="563" height="509" alt="image" src="https://github.com/user-attachments/assets/e9258c2b-e4d6-4b22-9a8f-e9b41eb924f0" />
 
-To support the Y axis, L brackets and SK8 clamps are used to hold the Y axis rods, which in turn support the X axis.
-<img width="285" height="188" alt="image" src="https://github.com/user-attachments/assets/2e80b816-7879-4229-bc31-7378d0a9f980" />
 
-The Y axis is made up of two carriages, one either side of the X gantry. Each Y carriage uses two SCS8UU bearing blocks to slide along the linear rod, making the Y motion. One carriage is an idler, which the belt loops around a pulley. The other carriage is the stepper motor carriage, which uses a Nema 17 motor to drive the X axis belt. Both carriages hold SK8 clamps supporting the X linear rods.
+To support the Y axis, V slot 2020 aluminium extrusions are used as rails holding a gantry, which in turn supports the X axis.
+
+
+The Y axis is made up of two carriages, one either side of the X gantry. Each Y carriage uses a gantry plate with wheels to slide along the extrusions, making the Y motion. One carriage is an idler, which the belt loops around a pulley. The other carriage is the stepper motor carriage, which uses a Nema 17 motor to drive the X axis belt. Both carriages hold 90 degree connectors supporting the X extrusion.
 Idler:
-<img width="869" height="682" alt="image" src="https://github.com/user-attachments/assets/0a442deb-1370-4e7f-b6a6-48a2bc152c82" />
+
 
 Stepper carriage:
-<img width="845" height="528" alt="image" src="https://github.com/user-attachments/assets/ca6f3948-9639-4b8e-89a0-9c64379931e5" />
-<img width="678" height="556" alt="image" src="https://github.com/user-attachments/assets/94e2eb2e-c6c4-4e62-abbd-3f23e7caca79" />
+
 
 The X carriage is made of two parts: the main carriage, and the toolhead. The main carriage holds the fan and the extruder stepper motor. When the carriage comes into dock, a fixed arm pushes the extruder idle arm to the side. The filament slides into the extruder,and when docking is complete, the spring loaded, idle arm pushes back into the filament, creating good tension. 
 <img width="764" height="604" alt="image" src="https://github.com/user-attachments/assets/5ad904bc-857b-488b-9857-69129a6abaad" />
@@ -110,21 +109,18 @@ The LCD is the main user interface of the printer. I am using the BIGTREETECH TF
 1x BTT TFT70 V3.0 LCD
 1x Arduino Mega 2560
 6x Limit switch
-10x 8mm smooth rods, 500mm length
+4x 8mm smooth rods, 500mm length
 1x 6mm smooth rod, 500mm length
 6x 8mm steel balls
-16x 2020 Aluminium profile 500mm length
+15x 2020 Aluminium profile 500mm length
 2x 500mm T8 8mm lead leadscrew 
-4x Anti-backlash leadscrew nut
+2x Anti-backlash leadscrew nut
 2x Hotend (CR6-SE)
-6x SCS8UU bearing block
 1x 4010 Fan
-28x SK8 clamp
-1x GT2 Timing Belt
 1x GT2 Kit
-4x Aluminium Profile 90 degree connector
+2x Aluminium Profile 90 degree connector
 8x Aluminium profile corner connector
-1x PSU (Meanwell 24v 360W
+1x PSU (24v 360w+)
 2x Screw terminals
 1x N-channel Mosfet
 1x 2x18 Pin header
@@ -146,8 +142,6 @@ The LCD is the main user interface of the printer. I am using the BIGTREETECH TF
 6x Leadscrew fixing block
 40x M5 screws and nuts
 40x M4 screws and nuts
-30x M3 Screws and nuts
-10x M2 screws and nuts
 2x Shaft coupler
 
 
