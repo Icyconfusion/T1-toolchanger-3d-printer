@@ -89,6 +89,8 @@ The power for the stepper drivers is 24v. To reduce the effect of spikes, a smal
 The LCD is the main user interface of the printer. I am using the BIGTREETECH TFT35 V3.0 Touch Screen from BigTreeTech which has wifi capability and is 3.5". I chose this LCD as it only uses 2 pins on the MCU (TX and RX), has an SD card, and is touchscreen. It is possible to mount the LCD separately to the motherboard, and run a cable between the two, enabling you to set it up however you like. LCD Header:
 <img width="481" height="178" alt="image" src="https://github.com/user-attachments/assets/00c3d65e-e621-4007-9945-d0f34a974b62" />
 
+The Motherboard and PSU are not fixed components to the printer and can be placed wherever suitable as long as cabling reaches. (I already have a case at home for my pcb from older projects).
+
 ### Schematic
 <img width="1403" height="635" alt="image" src="https://github.com/user-attachments/assets/a9da121c-049d-4db2-9c93-1d8431419d5b" />
 
