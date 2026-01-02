@@ -1,6 +1,6 @@
 # T1-toolchanger-3d-printer
 A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing that uses marlin as the firmware.
-<img width="810" height="752" alt="image" src="https://github.com/user-attachments/assets/e5c136a9-70ca-4d87-8322-f1a00a7d1534" />
+<img width="896" height="705" alt="image" src="https://github.com/user-attachments/assets/08c9021f-3ec5-47ec-ab87-f11c05bbfd20" />
 
 I made this project as I had been looking to make a 3d printer. I wanted to be able to print in different colours, without the added cost of AMS systems. It was also a good opportunity to learn about using programs like fusion and Kicad, which I have limited experience with, as well as learning about electronic components. I created this project without a guide, using my own ideas to combat problems, with some inspiration from existing products e.g using linear rods.
 
@@ -30,10 +30,15 @@ Stepper carriage:
 
 The X carriage is made of two parts: the main carriage, and the toolhead. The main carriage holds the fan and the extruder stepper motor. When the carriage comes into dock, a fixed arm pushes the extruder idle arm to the side. The filament slides into the extruder,and when docking is complete, the spring loaded, idle arm pushes back into the filament, creating good tension. 
 <img width="764" height="604" alt="image" src="https://github.com/user-attachments/assets/5ad904bc-857b-488b-9857-69129a6abaad" />
+
 The fan is a 4010 fan, which sits to the side and blows cool air through the heatsink fins. 
+
 <img width="433" height="368" alt="image" src="https://github.com/user-attachments/assets/7eee1bd7-e5d4-4851-8e0e-4429b5385716" />
+
 The belt post is located underneath the carriage.
-<img width="570" height="352" alt="image" src="https://github.com/user-attachments/assets/2a602d1f-98de-4862-b642-29f524d01e63" />
+
+<img width="608" height="323" alt="image" src="https://github.com/user-attachments/assets/e088cdea-a5cf-43ba-aa7c-791663ef31ae" />
+
 
 
 The carriage sid of the coupling contains the 6mm smooth rods of the kinematic coupling. This is printed in two pieces, so that the rods can be put into grooves before the 'lid' of the coupling closes through screws. The pogo connector is also housed here.
@@ -47,7 +52,8 @@ The hotend mounts to the two holes on the bottom.
 <img width="857" height="580" alt="image" src="https://github.com/user-attachments/assets/8d47bb4d-4436-419e-ada4-070ecd14115c" />
 
 The assembled X and Y axis is below:
-<img width="813" height="563" alt="image" src="https://github.com/user-attachments/assets/9dbd5a8a-5f42-403c-8045-e1dff4bb9b9a" />
+<img width="1281" height="774" alt="image" src="https://github.com/user-attachments/assets/fbcfda2c-d1ae-4489-a407-63d02ba6798e" />
+
 
 The Z axis involves the motion of the bed up and down. Originally, I had planned to move the hotend throughout all 3 axis, and the bed was fixed. I encountered many issues with reliably and consistently achieving motion of the hotend without the risk of flexing, so I pivoted to a bed Z axis. A leadscrew and two 8mm linear rods are used on each side, connected to an aluminium profile by a nut block and 3d printed clamps.
 <img width="569" height="408" alt="image" src="https://github.com/user-attachments/assets/d25802ae-9f6f-48ec-a895-641b2fc667ca" />
@@ -66,7 +72,8 @@ The bed frame is a square made of aluminium extrusions, held together by 90 degr
 # **Electronics**
 
 The printer uses a PCB motherboard to mount components including the MCU (Mega 2560), stepper drivers, LCD headers, and heater terminals. I decided on a 24v power supply as it was compatible with my heater. To give power to the PCB, I used a meanwell 24v 360W power supply.
-<img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/e40018ba-65bb-4718-b196-dc43032a6b18" />
+<img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/702ab6ea-9082-4103-b244-0c12045526c8" />
+
 
 This connects through wires to screw terminals on the board, which then distribute power across the PCB. Because of the power requirements, I decided to use a 4 layer PCB as I couldn't route signal traces through the power and GND traces. The top and bottom layers of the PCB are the power layers. Power runs from the PSU input to the heater screw terminal, and throughout the board. It is converted to 5v through a buck converter. The Hotend heater is powered through a screw terminal, and controlled by the mosfet next to its terminal. The hotend fan is controlled by a header, it is in an always on state.
 <img width="655" height="384" alt="image" src="https://github.com/user-attachments/assets/484874a6-35cf-4dcd-a01a-cc379433830f" />
@@ -79,7 +86,7 @@ The MCU is a mega 2560. I chose this because of its large availability of pins, 
 The power for the stepper drivers is 24v. To reduce the effect of spikes, a small 100nf capacitor is used between the 24v and gnd supply of each driver. For larger spikes, a 100 uF capacitor is also placed between 24v and gnd of each driver.
 <img width="277" height="402" alt="image" src="https://github.com/user-attachments/assets/eb339b2d-3b99-4bf2-b4e5-5e703c932cf7" />
 
-The LCD is the main user interface of the printer. I am using the BIGTREETECH TFT70 V3.0 Touch Screen from BigTreeTech which has wifi capability. I chose this LCD as it only uses 2 pins on the MCU (TX and RX), has an SD card, and is touchscreen. It is possible to mount the LCD separately to the motherboard, and run a cable between the two, enabling you to set it up however you like. LCD Header:
+The LCD is the main user interface of the printer. I am using the BIGTREETECH TFT35 V3.0 Touch Screen from BigTreeTech which has wifi capability and is 3.5". I chose this LCD as it only uses 2 pins on the MCU (TX and RX), has an SD card, and is touchscreen. It is possible to mount the LCD separately to the motherboard, and run a cable between the two, enabling you to set it up however you like. LCD Header:
 <img width="481" height="178" alt="image" src="https://github.com/user-attachments/assets/00c3d65e-e621-4007-9945-d0f34a974b62" />
 
 ### Schematic
@@ -106,43 +113,80 @@ The LCD is the main user interface of the printer. I am using the BIGTREETECH TF
 
 ### Parts
 
-1x BTT TFT70 V3.0 LCD
+1x BTT TFT35 V3.0 LCD
+
 1x Arduino Mega 2560
+
 6x Limit switch
+
 4x 8mm smooth rods, 500mm length
+
 1x 6mm smooth rod, 500mm length
+
 6x 8mm steel balls
+
 15x 2020 Aluminium profile 500mm length
+
 2x 500mm T8 8mm lead leadscrew 
+
+
 2x Anti-backlash leadscrew nut
+
 2x Hotend (CR6-SE)
+
 1x 4010 Fan
+
 1x GT2 Kit
+
 2x Aluminium Profile 90 degree connector
+
 8x Aluminium profile corner connector
+
 1x PSU (24v 360w+)
+
 2x Screw terminals
+
 1x N-channel Mosfet
+
 1x 2x18 Pin header
+
 16x Female pin headers
+
 42x Male pin headers
+
 5x A4988 Stepper drivers
+
 1x 20 AWG Wire
+
 1x 12 AWG Wire
+
 3x Pogo connectors
+
 1x 3d print bed
+
 4x LM8UU bearing
+
 2x Angular bearing
+
 1x DC-DC step down Buck Converter
+
 110x T Nuts
+
 8x L Bracket
+
 5x 100 nF Capacitor
+
 5x 100 µF capacitor
+
 1x Spring
+
 6x Leadscrew fixing block
+
 40x M5 screws and nuts
+
 40x M4 screws and nuts
-2x Shaft coupler
+
+2x Shaft coupler 5x8mm
 
 
 
