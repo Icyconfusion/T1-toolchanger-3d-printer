@@ -94,6 +94,12 @@ The Motherboard and PSU are not fixed components to the printer and can be place
 ### Schematic
 <img width="1403" height="635" alt="image" src="https://github.com/user-attachments/assets/a9da121c-049d-4db2-9c93-1d8431419d5b" />
 
+#**Firmware**
+
+The printer uses the latest version of marlin firmware, which enables the use of G-code. The general firmware of the printer is fairly standard and straightforward, as marlin is just configured to the printer dimensions and layout. 
+
+However, the printer being a toolchanger introduces a unique element to the firmware in the connection and preparation of multiple toolheads. To simplify firmware and general electronics, I decided on having 'hot-swappable' toolheads that connect through pogo connectors. Because of this, the firmware views it as one hotend when it comes to heating the temperature monitoring. In this aspect, the printer appears as standard. To facilitate toolchanges though, special G-code is required to move the carriage into specific positions. This is most effectively achieved through pre and post g-code in the slicer per tool. The main idea of the toolchange G-code is that the empty carriage moves into alignment with the passive tool, moves forward to latch on, and then returns to the print area. When returning a tool to the standby dock, it is the same idea in reverse, where it moves into a specific position, pushes the tool into the dock, and returns to pick up another tool. 
+
 # **BOM**
 ### CAD
 
