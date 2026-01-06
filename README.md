@@ -94,7 +94,7 @@ The Motherboard and PSU are not fixed components to the printer and can be place
 ### Schematic
 <img width="1403" height="635" alt="image" src="https://github.com/user-attachments/assets/a9da121c-049d-4db2-9c93-1d8431419d5b" />
 
-#**Firmware**
+# **Firmware**
 
 The printer uses the latest version of marlin firmware, which enables the use of G-code. The general firmware of the printer is fairly standard and straightforward, as marlin is just configured to the printer dimensions and layout. 
 
@@ -103,15 +103,22 @@ However, the printer being a toolchanger introduces a unique element to the firm
 Pre:
 
 M1 X(Tool X value) Y440 F6000
+
 M1 X(Tool X value) Y480 F2000
+
 M1 X(Tool X value + 60) Y480 F2000
+
 M1 X(Tool X value + 60) Y440 F2000
 
 Post:
 
+
 M1 X(Tool X value + 60) Y440 F6000
+
 M1 X(Tool X value + 60) Y480 F2000
+
 M1 X(Tool X value) Y480 F2000
+
 M1 X(Tool X value) Y440 F1000
 
 The X values are unique to each tool, as tools are docked in order across the X axis. Specific values will require precise tuning with manual adjustment following assembly to ensure correct alignment of the coupling, so values are not possible now, but the spacing between docks will be roughly 100mm.
