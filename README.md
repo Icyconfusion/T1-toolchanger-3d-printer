@@ -93,6 +93,15 @@ The Motherboard and PSU are not fixed components to the printer and can be place
 
 ### Schematic
 <img width="1403" height="635" alt="image" src="https://github.com/user-attachments/assets/a9da121c-049d-4db2-9c93-1d8431419d5b" />
+<img width="1583" height="861" alt="image" src="https://github.com/user-attachments/assets/5b7f5991-a8b0-4be8-a7a3-ba1de6fa06a7" />
+<img width="981" height="538" alt="image" src="https://github.com/user-attachments/assets/944db4fe-2f1a-42da-8d79-5a06de2da1bc" />
+<img width="270" height="184" alt="image" src="https://github.com/user-attachments/assets/8c513895-a58e-48f0-a33b-a2ed6b958679" />
+<img width="1408" height="575" alt="image" src="https://github.com/user-attachments/assets/a8e6fe7b-1191-45b3-bde3-2fdb63d4d2f9" />
+<img width="725" height="723" alt="image" src="https://github.com/user-attachments/assets/e2a75c30-2cd1-4396-9493-781e023c6a53" />
+
+
+
+
 
 # **Firmware**
 
