@@ -75,7 +75,7 @@ The printer uses a PCB motherboard to mount components including the MCU (Mega 2
 <img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/702ab6ea-9082-4103-b244-0c12045526c8" />
 
 
-This connects through wires to screw terminals on the board, which then distribute power across the PCB. Because of the power requirements, I decided to use a 4 layer PCB as I couldn't route signal traces through the power and GND traces. The top and bottom layers of the PCB are the power layers. Power runs from the PSU input to the heater screw terminal, and throughout the board. It is converted to 5v through a buck converter. The Hotend heater is powered through a screw terminal, and controlled by the mosfet next to its terminal. The hotend fan is controlled by a header, it is in an always on state.
+This connects through wires to screw terminals on the board, which then distribute power across the PCB. Because of the power requirements, I decided to use a 4 layer PCB as I couldn't route signal traces through the power and GND traces. Using a 4 layer PCB is necessary to the peojwct due to the power layout of drivers, making signal traces impossible without a 3rd and 4th layer. The top and bottom layers of the PCB are the power layers. Power runs from the PSU input to the heater screw terminal, and throughout the board. It is converted to 5v through a buck converter. The Hotend heater is powered through a screw terminal, and controlled by the mosfet next to its terminal. The hotend fan is controlled by a header, it is in an always on state.
 <img width="655" height="384" alt="image" src="https://github.com/user-attachments/assets/484874a6-35cf-4dcd-a01a-cc379433830f" />
 
 The signal traces from the drivers, limit switches, thermistor and LCD are on the second and third layers.
@@ -98,7 +98,25 @@ The Motherboard and PSU are not fixed components to the printer and can be place
 
 The printer uses the latest version of marlin firmware, which enables the use of G-code. The general firmware of the printer is fairly standard and straightforward, as marlin is just configured to the printer dimensions and layout. 
 
-However, the printer being a toolchanger introduces a unique element to the firmware in the connection and preparation of multiple toolheads. To simplify firmware and general electronics, I decided on having 'hot-swappable' toolheads that connect through pogo connectors. Because of this, the firmware views it as one hotend when it comes to heating the temperature monitoring. In this aspect, the printer appears as standard. To facilitate toolchanges though, special G-code is required to move the carriage into specific positions. This is most effectively achieved through pre and post g-code in the slicer per tool. The main idea of the toolchange G-code is that the empty carriage moves into alignment with the passive tool, moves forward to latch on, and then returns to the print area. When returning a tool to the standby dock, it is the same idea in reverse, where it moves into a specific position, pushes the tool into the dock, and returns to pick up another tool. 
+However, the printer being a toolchanger introduces a unique element to the firmware in the connection and preparation of multiple toolheads. To simplify firmware and general electronics, I decided on having 'hot-swappable' toolheads that connect through pogo connectors. Because of this, the firmware views it as one hotend when it comes to heating the temperature monitoring. In this aspect, the printer appears as standard. To facilitate toolchanges though, special G-code is required to move the carriage into specific positions. This is most effectively achieved through pre and post g-code in the slicer per tool. The main idea of the toolchange G-code is that the empty carriage moves into alignment with the passive tool, moves forward to latch on, and then returns to the print area. When returning a tool to the standby dock, it is the same idea in reverse, where it moves into a specific position, pushes the tool into the dock, and returns to pick up another tool. This is the series of G-code to paste into the slicer pre and post processing:
+
+Pre:
+
+M1 X(Tool X value) Y440 F6000
+M1 X(Tool X value) Y480 F2000
+M1 X(Tool X value + 60) Y480 F2000
+M1 X(Tool X value + 60) Y440 F2000
+
+Post:
+
+M1 X(Tool X value + 60) Y440 F6000
+M1 X(Tool X value + 60) Y480 F2000
+M1 X(Tool X value) Y480 F2000
+M1 X(Tool X value) Y440 F1000
+
+The X values are unique to each tool, as tools are docked in order across the X axis. Specific values will require precise tuning with manual adjustment following assembly to ensure correct alignment of the coupling, so values are not possible now, but the spacing between docks will be roughly 100mm.
+
+Breaking down this G-code, the carriage moves into a position hovering off of the dock, in X alignment. The carriage then slowly pushes into the docked tool in the second G-code command. At this point, the kinematic coupling engages, ensuring alignment, and the magnetic clamp and pogo connectors attach, preparing the tool for printing. The third G-code command moves the carriage and new tool to the right, out of the dock, before returning to the print area with the fourth command. this process occurs in reverse for the docking of the tool/post G-code series.
 
 # **BOM**
 ### CAD
