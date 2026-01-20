@@ -2,6 +2,8 @@
 A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing that uses marlin as the firmware.
 <img width="896" height="705" alt="image" src="https://github.com/user-attachments/assets/08c9021f-3ec5-47ec-ab87-f11c05bbfd20" />
 
+**Note to reviewer:** Since submitting project for review I have updated the BOM (haven't changed products, just updated the prices). The new bom is more than what was in the review, but I have multiple discounts and coupons (that I have also tested) which bring it back down to what I mentioned in review. Thank you :)
+
 I made this project as I had been looking to make a 3d printer. I wanted to be able to print in different colours, without the added cost of AMS systems. It was also a good opportunity to learn about using programs like fusion and Kicad, which I have limited experience with, as well as learning about electronic components. I created this project without a guide, using my own ideas to combat problems, with some inspiration from existing products e.g using linear rods.
 
 Note: The assembly files are too large to upload to Github directly. Instead I have put the assembly .step file and .f3z file into a zipped folder named: Printer assembly.zip 
