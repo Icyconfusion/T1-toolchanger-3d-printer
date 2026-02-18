@@ -1,6 +1,6 @@
 # T1-toolchanger-3d-printer
 A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing that uses marlin as the firmware.
-<img width="896" height="705" alt="image" src="https://github.com/user-attachments/assets/08c9021f-3ec5-47ec-ab87-f11c05bbfd20" />
+<img width="583" height="587" alt="image" src="https://github.com/user-attachments/assets/faf88789-b28d-4d42-8418-bf60522544dd" />
 
 **Note to reviewer:** Since submitting project for review I have updated the BOM (haven't changed products, just updated the prices). The new bom is more than what was in the review, but I have multiple discounts and coupons (that I have also tested) which bring it back down to what I mentioned in review. Thank you :) Also, in regards to firmware, the entire marlin zip folder (must be a zip) is in the firmware folder, but I have copied all files that have been edited and/or relevant (e.g config and ino files) as well into the firmware folder for the reviewer to view. I was instructed to do it this way by other reviewers in similar projects. Thanks.
 
@@ -12,55 +12,59 @@ I have also uploaded the same step file as a zipped folder called printer assemb
 
 
 The printer uses a swappable hotend mechanism to dock tools, removing the need to purge filament as in other multi-material systems. The idle toolheads sit on an aluminium extrusion. The X carriage, supported by a V slot extrusion, moves in and attaches to the toolhead, using kinematic couplings for repeatability. A magnetic pogo connector transfers power for the heter and thermistor.
-<img width="890" height="646" alt="image" src="https://github.com/user-attachments/assets/f353a81a-1eab-4a17-8c4e-561f42465f79" />
+<img width="386" height="479" alt="image" src="https://github.com/user-attachments/assets/56d7a2ce-660d-4bcc-960f-2b4d483141ab" />
+
 
 Toolhead:
-<img width="543" height="517" alt="image" src="https://github.com/user-attachments/assets/016b33a6-f840-4cb9-86a1-df751536feec" />
+<img width="1012" height="784" alt="image" src="https://github.com/user-attachments/assets/9aa983a8-3648-442d-aa2f-5eef0473cef6" />
+<img width="967" height="628" alt="image" src="https://github.com/user-attachments/assets/10904348-9b37-4cd0-b37c-3d84bc18a722" />
+
 
 # **Assembly**
 
 The printer assembly is made by aluminium extrusions forming a cube, with corner connectors for mounting.
+<img width="832" height="813" alt="image" src="https://github.com/user-attachments/assets/4347bbd8-eae0-4dbe-9538-16369c4790b9" />
 
 
 To support the Y axis, V slot 2020 aluminium extrusions are used as rails holding a gantry, which in turn supports the X axis.
-
-
 The Y axis is made up of two carriages, one either side of the X gantry. Each Y carriage uses a gantry plate with wheels to slide along the extrusions, making the Y motion. One carriage is an idler, which the belt loops around a pulley. The other carriage is the stepper motor carriage, which uses a Nema 17 motor to drive the X axis belt. Both carriages hold 90 degree connectors supporting the X extrusion.
-Idler:
+Idler:<img width="780" height="571" alt="image" src="https://github.com/user-attachments/assets/6c0c5534-d9d8-4d2f-9483-c314ea633a82" />
+
 
 
 Stepper carriage:
+<img width="495" height="442" alt="image" src="https://github.com/user-attachments/assets/3f29152c-e13c-4185-9b21-6d38d537004d" />
 
 
 The X carriage is made of two parts: the main carriage, and the toolhead. The main carriage holds the fan and the extruder stepper motor. When the carriage comes into dock, a fixed arm pushes the extruder idle arm to the side. The filament slides into the extruder,and when docking is complete, the spring loaded, idle arm pushes back into the filament, creating good tension. 
 <img width="764" height="604" alt="image" src="https://github.com/user-attachments/assets/5ad904bc-857b-488b-9857-69129a6abaad" />
 
-The fan is a 4010 fan, which sits to the side and blows cool air through the heatsink fins. 
+The fan is a 4010 fan, which sits to the side and blows cool air through the heatsink fins and also onto the part/top layer. 
+<img width="422" height="467" alt="image" src="https://github.com/user-attachments/assets/9985ac70-1946-43e4-9276-e3109f47b17f" />
 
-<img width="433" height="368" alt="image" src="https://github.com/user-attachments/assets/7eee1bd7-e5d4-4851-8e0e-4429b5385716" />
 
-The belt post is located underneath the carriage.
 
-<img width="608" height="323" alt="image" src="https://github.com/user-attachments/assets/e088cdea-a5cf-43ba-aa7c-791663ef31ae" />
+The belt post is located behind the carriage.
+
+<img width="287" height="468" alt="image" src="https://github.com/user-attachments/assets/93a12727-6598-4825-a860-10cf248974ef" />
+
+
 
 
 
 The carriage sid of the coupling contains the 6mm smooth rods of the kinematic coupling. This is printed in two pieces, so that the rods can be put into grooves before the 'lid' of the coupling closes through screws. The pogo connector is also housed here.
-<img width="609" height="688" alt="image" src="https://github.com/user-attachments/assets/b3a65658-4a6f-4a5e-bf3b-f52c7e877781" />
-<img width="703" height="761" alt="image" src="https://github.com/user-attachments/assets/e64d68f9-87fb-452e-851e-f9bc541af3cf" />
-<img width="891" height="700" alt="image" src="https://github.com/user-attachments/assets/9d94652b-2f6e-4e3e-a788-707e0d8b9a12" />
+<img width="728" height="532" alt="image" src="https://github.com/user-attachments/assets/0fec19f4-bb58-4467-8d14-0ed86516eca2" />
+<img width="737" height="590" alt="image" src="https://github.com/user-attachments/assets/575ff1e0-80c7-42ca-b58a-f8f6172730de" />
 
 The toolhead uses steel balls to push into the kinematic coupling. The male side of the pogo connector is on the toolhead.
-<img width="897" height="677" alt="image" src="https://github.com/user-attachments/assets/e1fc08a6-08ca-4877-b842-40cf4f343d8d" />
-The hotend mounts to the two holes on the bottom.
-<img width="857" height="580" alt="image" src="https://github.com/user-attachments/assets/8d47bb4d-4436-419e-ada4-070ecd14115c" />
+<img width="685" height="603" alt="image" src="https://github.com/user-attachments/assets/a49b23d0-b526-4493-a18b-31fe9b0227ed" />
 
-The assembled X and Y axis is below:
-<img width="1281" height="774" alt="image" src="https://github.com/user-attachments/assets/fbcfda2c-d1ae-4489-a407-63d02ba6798e" />
+The hotend mounts to the two holes in the middle.
 
 
 The Z axis involves the motion of the bed up and down. Originally, I had planned to move the hotend throughout all 3 axis, and the bed was fixed. I encountered many issues with reliably and consistently achieving motion of the hotend without the risk of flexing, so I pivoted to a bed Z axis. A leadscrew and two 8mm linear rods are used on each side, connected to an aluminium profile by a nut block and 3d printed clamps.
-<img width="569" height="408" alt="image" src="https://github.com/user-attachments/assets/d25802ae-9f6f-48ec-a895-641b2fc667ca" />
+<img width="600" height="679" alt="image" src="https://github.com/user-attachments/assets/d6711d7c-f21c-45e6-85c4-b537f164d5d2" />
+
 
 The bed frame is a square made of aluminium extrusions, held together by 90 degree corner connectors. The 6mm aluminium print bed sits on top of that, threaded into T nuts in the profiles.
 <img width="617" height="630" alt="image" src="https://github.com/user-attachments/assets/75dc115a-3a3c-4c20-b868-0830292d1216" />
@@ -143,15 +147,15 @@ Breaking down this G-code, the carriage moves into a position hovering off of th
 
 | Quanity      | Name                     |  Picture    |
 | -------------| -------------------------|-----------  |
-|1             | Y carriage Idler         |<img width="606" height="466" alt="image" src="https://github.com/user-attachments/assets/ffd1db70-879c-4ebd-bb6e-953022c5ced1" />
-| 1            | Y carriage stepper motor |     |
-| 1            | X carriage               |<img width="816" height="535" alt="image" src="https://github.com/user-attachments/assets/fa71c8db-2c14-4270-a649-faf2eaf7d6ea" />
-| 1            | Extruder coupling        | <img width="910" height="492" alt="image" src="https://github.com/user-attachments/assets/21613620-40f1-4a05-82c4-1d6b71b7058b" />
+|1             | Y carriage Idle bracket         |
+| 1            | New X carriage               |
 | 1 (per tool) | Toolhead                 |<img width="927" height="597" alt="image" src="https://github.com/user-attachments/assets/19b2ccc4-2ab2-40dc-970a-1fd5396f2856" />
-| 1            | Extruder mechanism       |<img width="607" height="399" alt="image" src="https://github.com/user-attachments/assets/b570c79d-a953-4c9f-bea3-65194da70070" />
 | 4            | Z axis bearing clamp     |<img width="815" height="679" alt="image" src="https://github.com/user-attachments/assets/293ec12e-89ed-4642-9345-cbd87039b55d" />
 | 2            | Z stepper bracket        |<img width="882" height="596" alt="image" src="https://github.com/user-attachments/assets/4177f87a-acc6-4713-a8a9-84b64c39d4c3" />
 | 4            | Z rod holder             |<img width="763" height="627" alt="image" src="https://github.com/user-attachments/assets/a2213d38-e17e-4504-9cd1-95e1a024b09e" />
+| 2       | Nema 17 parallel mount| 
+|4 | plain limit switch bracket| 
+|4| z rod top bracket|
 
 ### PCB
 4 layer PCB that is 230x135mm:
