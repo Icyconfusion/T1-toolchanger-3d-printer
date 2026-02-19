@@ -78,6 +78,8 @@ The bed frame is a square made of aluminium extrusions, held together by 90 degr
 
 
 # **Electronics**
+<img width="1150" height="734" alt="image" src="https://github.com/user-attachments/assets/768ac75e-59ce-4b11-b38a-0186ca5c3015" />
+
 
 The printer uses a PCB motherboard to mount components including the MCU (Mega 2560), stepper drivers, LCD headers, and heater terminals. I decided on a 24v power supply as it was compatible with my heater. To give power to the PCB, I used a meanwell 24v 360W power supply.
 <img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/702ab6ea-9082-4103-b244-0c12045526c8" />
@@ -106,6 +108,7 @@ The Motherboard and PSU are not fixed components to the printer and can be place
 <img width="270" height="184" alt="image" src="https://github.com/user-attachments/assets/8c513895-a58e-48f0-a33b-a2ed6b958679" />
 <img width="1408" height="575" alt="image" src="https://github.com/user-attachments/assets/a8e6fe7b-1191-45b3-bde3-2fdb63d4d2f9" />
 <img width="725" height="723" alt="image" src="https://github.com/user-attachments/assets/e2a75c30-2cd1-4396-9493-781e023c6a53" />
+
 
 
 
