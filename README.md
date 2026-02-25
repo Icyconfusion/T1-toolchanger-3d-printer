@@ -1,6 +1,7 @@
 # T1-toolchanger-3d-printer
 A toolchanger 3d printer with large format build size and multiple tools for quick, easy multi-material printing that uses marlin as the firmware.
-<img width="583" height="587" alt="image" src="https://github.com/user-attachments/assets/faf88789-b28d-4d42-8418-bf60522544dd" />
+<img width="815" height="717" alt="image" src="https://github.com/user-attachments/assets/38e58c9f-eab8-431e-9f41-fe0b2112735e" />
+
 
 **Note to reviewer:** Since submitting project for review I have updated the BOM (haven't changed products, just updated the prices). The new bom is more than what was in the review, but I have multiple discounts and coupons (that I have also tested) which bring it back down to what I mentioned in review. Thank you :) Also, in regards to firmware, the entire marlin zip folder (must be a zip) is in the firmware folder, but I have copied all files that have been edited and/or relevant (e.g config and ino files) as well into the firmware folder for the reviewer to view. I was instructed to do it this way by other reviewers in similar projects. Thanks.
 
@@ -16,8 +17,8 @@ The printer uses a swappable hotend mechanism to dock tools, removing the need t
 
 
 Toolhead:
-<img width="1012" height="784" alt="image" src="https://github.com/user-attachments/assets/9aa983a8-3648-442d-aa2f-5eef0473cef6" />
-<img width="967" height="628" alt="image" src="https://github.com/user-attachments/assets/10904348-9b37-4cd0-b37c-3d84bc18a722" />
+<img width="587" height="531" alt="image" src="https://github.com/user-attachments/assets/8d0bf8e6-a7aa-4e4d-ba47-985909c1d0bc" />
+<img width="633" height="535" alt="image" src="https://github.com/user-attachments/assets/5cbeeb0f-5585-4df4-8152-2cf6aed01155" />
 
 
 # **Assembly**
@@ -72,6 +73,10 @@ The bed frame is a square made of aluminium extrusions, held together by 90 degr
 <img width="657" height="303" alt="image" src="https://github.com/user-attachments/assets/5f6981f7-08a3-4a04-ab67-2ce45387adbb" />
 <img width="880" height="356" alt="image" src="https://github.com/user-attachments/assets/f8bb2860-a8e1-437e-bc85-dd8f3af04aad" />
 
+Toolchanging mechanism. Tools are held on the toolchanger rack, installed with T nuts on an aluminium profile. L shaped hooks hold the tools in place, using knobs on the tools.Wwhen the tool slides in sideways, the knob/tool will be separated from the carriage by the hook Then the carriage will move backwards, detaching the magnets in the connectors, and pulling the tool off the rack. To attach, it simply presses the carriage onto the tool, pushes it back and slides out.
+<img width="1218" height="755" alt="image" src="https://github.com/user-attachments/assets/aa4679f3-8cc3-4fd2-b12e-470ec22481d3" />
+<img width="829" height="574" alt="image" src="https://github.com/user-attachments/assets/d9235e37-5484-43c7-8e78-34b6170f11a6" />
+<img width="711" height="576" alt="image" src="https://github.com/user-attachments/assets/905b5d3b-618c-49c9-a6e7-a94856ecbdc0" />
 
 
 
@@ -162,6 +167,8 @@ Breaking down this G-code, the carriage moves into a position hovering off of th
 |4 | plain limit switch bracket| <img width="547" height="637" alt="image" src="https://github.com/user-attachments/assets/535abee3-f005-48a5-8461-f3b642c4d328" />
 
 |4| z rod top bracket|<img width="683" height="472" alt="image" src="https://github.com/user-attachments/assets/a7e2ab64-90dd-4a99-9ed3-44ca7b5bf581" />
+|1| toolchanger rack| <img width="829" height="574" alt="image" src="https://github.com/user-attachments/assets/5888e56c-90b1-47cb-81b0-42fc334f1d6b" />
+
 
 
 ### PCB
