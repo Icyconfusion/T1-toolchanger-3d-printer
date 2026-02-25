@@ -170,6 +170,7 @@ Breaking down this G-code, the carriage moves into a position hovering off of th
 ### PCB
 4 layer PCB that is 230x135mm:
 <img width="1053" height="632" alt="image" src="https://github.com/user-attachments/assets/2bf4712b-93e3-4951-a62d-261e292cb73d" />
+Layers 1 and 4 make up the power layers, 24v (a small bit of 5v) and GND. This was a requirement due to the large power draw of the machine, requiring thick traces that took up a lot of room. I tried routing the pcb using only 2 layers, but this was not possible. Layers 2 and 3 are signal layers.
 
 ### Parts
 
