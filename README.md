@@ -156,16 +156,12 @@ Breaking down this G-code, the carriage moves into a position hovering off of th
 | Quanity      | Name                     |  Picture    |
 | -------------| -------------------------|-----------  |
 | 1            | New X carriage               |<img width="783" height="730" alt="image" src="https://github.com/user-attachments/assets/c879e0f8-5557-4a87-a9da-11e6d7c7c95a" />
-
 | 1 (per tool) | Toolhead                 |<img width="645" height="530" alt="image" src="https://github.com/user-attachments/assets/a53846ff-6eb0-443b-972b-224049141d93" />
-
 | 4            | Z axis bearing clamp     |<img width="815" height="679" alt="image" src="https://github.com/user-attachments/assets/293ec12e-89ed-4642-9345-cbd87039b55d" />
 | 2            | Z stepper bracket        |<img width="882" height="596" alt="image" src="https://github.com/user-attachments/assets/4177f87a-acc6-4713-a8a9-84b64c39d4c3" />
 | 4            | Z rod holder             |<img width="763" height="627" alt="image" src="https://github.com/user-attachments/assets/a2213d38-e17e-4504-9cd1-95e1a024b09e" />
 | 2       | Nema 17 parallel mount| <img width="459" height="632" alt="image" src="https://github.com/user-attachments/assets/acafebbb-9525-4af0-b78a-80282fd7561e" />
-
 |4 | plain limit switch bracket| <img width="547" height="637" alt="image" src="https://github.com/user-attachments/assets/535abee3-f005-48a5-8461-f3b642c4d328" />
-
 |4| z rod top bracket|<img width="683" height="472" alt="image" src="https://github.com/user-attachments/assets/a7e2ab64-90dd-4a99-9ed3-44ca7b5bf581" />
 |1| toolchanger rack| <img width="829" height="574" alt="image" src="https://github.com/user-attachments/assets/5888e56c-90b1-47cb-81b0-42fc334f1d6b" />
 
